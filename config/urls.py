@@ -17,8 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# from questions import views as questions_views
+# from results import views as results_views
+
+# from questions.views import say_hello
+# from results.views import say_hello
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # path("rooms", views.say_hello),
     path("api/v1/questions/", include("questions.urls")),
     path("api/v1/results/", include("results.urls")),
     # path("api/v2/questions/", include("feeds.urls")),
